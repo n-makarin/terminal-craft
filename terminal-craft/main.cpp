@@ -11,16 +11,19 @@
 
 #define use_xcode_ncurses_debugger
 
-void init()
+void await_xcode_ncurses_debugger()
 {
-#ifdef use_xcode_ncurses_debugger
-    
     Xnd xnd;
     if (!xnd.is_terminal_ready()) {
         exit(0);
     }
+}
+
+void init()
+{
+#ifdef use_xcode_ncurses_debugger
+    await_xcode_ncurses_debugger();
 #endif
-    
 }
 
 int main(int argc, const char * argv[]) {
