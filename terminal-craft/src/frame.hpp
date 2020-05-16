@@ -10,12 +10,18 @@
 #define frame_hpp
 
 #include <stdio.h>
+#include <ncurses.h>
 
 class Frame {
-    
+    int row, col;
     
 public:
     void draw();
+    void set_rows_and_columns_number();
+    
+private:
+    void init();
+    void print();
 };
 
 #endif /* frame_hpp */

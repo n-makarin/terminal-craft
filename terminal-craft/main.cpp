@@ -8,8 +8,30 @@
 
 #include <iostream>
 #include "src/xnd/xnd.hpp"
+#include "src/frame.hpp"
 
 #define use_xcode_ncurses_debugger
+
+void init();
+void await_xcode_ncurses_debugger();
+void draw_frame();
+
+
+
+int main(int argc, const char * argv[]) {
+    init();
+    return 0;
+}
+
+
+void init()
+{
+#ifdef use_xcode_ncurses_debugger
+    await_xcode_ncurses_debugger();
+#endif
+    
+    draw_frame();
+}
 
 void await_xcode_ncurses_debugger()
 {
@@ -19,14 +41,8 @@ void await_xcode_ncurses_debugger()
     }
 }
 
-void init()
+void draw_frame()
 {
-#ifdef use_xcode_ncurses_debugger
-    await_xcode_ncurses_debugger();
-#endif
-}
-
-int main(int argc, const char * argv[]) {
-    init();
-    return 0;
+    Frame frame;
+    frame.draw();
 }
