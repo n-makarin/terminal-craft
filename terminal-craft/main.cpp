@@ -7,9 +7,23 @@
 //
 
 #include <iostream>
+#include "src/xnd/xnd.hpp"
+
+#define use_xcode_ncurses_debugger
+
+void init()
+{
+#ifdef use_xcode_ncurses_debugger
+    
+    xnd xnd;
+    if (!xnd.is_terminal_ready()) {
+        exit(0);
+    }
+#endif
+    
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    init();
     return 0;
 }

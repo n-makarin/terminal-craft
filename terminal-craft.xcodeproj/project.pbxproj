@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		88065DFE2470707C007B6062 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88065DFD2470707C007B6062 /* main.cpp */; };
 		88065E062470709F007B6062 /* libcurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 88065E0524707098007B6062 /* libcurses.tbd */; };
+		88065E0C24707473007B6062 /* xnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88065E0A24707473007B6062 /* xnd.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		88065DFD2470707C007B6062 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		88065E0524707098007B6062 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
 		88065E0724707285007B6062 /* run.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run.sh; sourceTree = "<group>"; };
+		88065E0A24707473007B6062 /* xnd.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = xnd.cpp; sourceTree = "<group>"; };
+		88065E0B24707473007B6062 /* xnd.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = xnd.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 		88065DFC2470707C007B6062 /* terminal-craft */ = {
 			isa = PBXGroup;
 			children = (
+				88065E082470743F007B6062 /* src */,
 				88065DFD2470707C007B6062 /* main.cpp */,
 				88065E0724707285007B6062 /* run.sh */,
 			);
@@ -74,6 +78,23 @@
 				88065E0524707098007B6062 /* libcurses.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88065E082470743F007B6062 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				88065E0924707449007B6062 /* xnd */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		88065E0924707449007B6062 /* xnd */ = {
+			isa = PBXGroup;
+			children = (
+				88065E0A24707473007B6062 /* xnd.cpp */,
+				88065E0B24707473007B6062 /* xnd.hpp */,
+			);
+			path = xnd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88065E0C24707473007B6062 /* xnd.cpp in Sources */,
 				88065DFE2470707C007B6062 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
