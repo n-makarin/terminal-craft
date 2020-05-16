@@ -27,6 +27,7 @@
 		88065DFA2470707C007B6062 /* terminal-craft */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "terminal-craft"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88065DFD2470707C007B6062 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		88065E0524707098007B6062 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
+		88065E0724707285007B6062 /* run.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				88065DFD2470707C007B6062 /* main.cpp */,
+				88065E0724707285007B6062 /* run.sh */,
 			);
 			path = "terminal-craft";
 			sourceTree = "<group>";
