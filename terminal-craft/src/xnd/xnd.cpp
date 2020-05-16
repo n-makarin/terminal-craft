@@ -14,7 +14,7 @@
 #include <errno.h>
 
 
-bool xnd::is_debugger_attached(int timeout_ms)
+bool Xnd::is_debugger_attached(int timeout_ms)
 {
     fd_set fd_stdin;
     FD_ZERO(&fd_stdin);
@@ -37,7 +37,7 @@ bool xnd::is_debugger_attached(int timeout_ms)
     return true;
 }
 
-bool xnd::is_terminal_ready()
+bool Xnd::is_terminal_ready()
 {
     if (!is_debugger_attached(700)) {
         return 1;

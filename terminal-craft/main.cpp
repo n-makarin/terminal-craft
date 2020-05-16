@@ -15,7 +15,7 @@ void init()
 {
 #ifdef use_xcode_ncurses_debugger
     
-    xnd xnd;
+    Xnd xnd;
     if (!xnd.is_terminal_ready()) {
         exit(0);
     }

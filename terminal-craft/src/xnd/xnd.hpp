@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-class xnd {
+class Xnd {
     bool has_terminal{false};
 
 public:
