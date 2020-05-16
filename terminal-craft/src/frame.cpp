@@ -8,6 +8,9 @@
 
 #include "frame.hpp"
 
+#define ESC 27
+#define KEY_Y 121
+
 
 // public
 void Frame::draw()
@@ -17,8 +20,9 @@ void Frame::draw()
     
     Frame::print();
     
-    getch();
-    endwin();
+
+    Frame::set_exit_listener();
+    
 }
 
 void Frame::set_rows_and_columns_number()
@@ -40,4 +44,36 @@ void Frame::print()
 {
     printw("Your terminal window width is %d, height is %d", row, col);
     refresh();
+}
+
+void Frame::exit()
+{
+    endwin();
+    ::exit(0);
+}
+
+void Frame::set_exit_listener()
+{
+    while (1) {
+        int ch = getch();
+        printw("ch");
+        
+        if (ch != ESC) {
+            continue;
+        }
+        if (!Frame::confirm_exit()) {
+            continue;
+        }
+        Frame::exit();
+    }
+}
+
+bool Frame::confirm_exit()
+{
+    printw("Confirm exit? (y/n)");
+    int ch = getch();
+    if (ch == KEY_Y) {
+        return true;
+    }
+    return false;
 }

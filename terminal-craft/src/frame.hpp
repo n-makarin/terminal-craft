@@ -10,6 +10,7 @@
 #define frame_hpp
 
 #include <stdio.h>
+#include <iostream>
 #include <ncurses.h>
 
 class Frame {
@@ -22,6 +23,9 @@ public:
 private:
     void init();
     void print();
+    void exit();
+    void set_exit_listener();
+    bool confirm_exit();
 };
 
 #endif /* frame_hpp */
